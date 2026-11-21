@@ -43,10 +43,10 @@ Developed by **Dream Team**, Department of Smart Convergence Systems Engineering
 
 | Member | Student ID | Academic Status | Core Responsibilities & Modules |
 | :--- | :---: | :--- | :--- |
-| **Dharanidharan Ravikumar** | 2671007 | Master's Student | **System Architecture & Integration**, Main Game Flow (`main.cpp`, `quiz_core.cpp`), Category-Specific Leaderboard Ranking System (`ranking.cpp`) |
-| **Maria Liezel Eusebio** | 2677319 | Master's Student | **Categories & Question Bank** (`categories.cpp`), Statistical Correlation & Regression Pipeline (`correlation_analysis.ipynb`) |
+| **Dharanidharan Ravikumar** ([@DharanidharanRavikumar](https://github.com/DharanidharanRavikumar)) | 2671007 | Master's Student | **System Architecture & Integration**, Main Game Flow (`main.cpp`, `quiz_core.cpp`), Category-Specific Leaderboard Ranking System (`ranking.cpp`) |
+| **Maria Liezel Eusebio** ([@mceusebio](https://github.com/mceusebio)) | 2677319 | Master's Student | **Categories & Question Bank** (`categories.cpp`), Statistical Correlation & Regression Pipeline (`correlation_analysis.ipynb`) |
 | **Saranrat Roteaim (Fah)** | 2677934 | Master's - PhD Integrated | **Random Question Generator** without replacement (`random_questions.cpp`) |
-| **Patthadol Raksapram (Pawe)** | 2677946 | Master's - PhD Integrated | **30-Second Timed Answer Input** (`timer.cpp`), Session Telemetry CSV Logger (`quiz_history.cpp`) |
+| **Patthadol Raksapram (Pawe)** ([@Dolptd](https://github.com/Dolptd)) | 2677946 | Master's - PhD Integrated | **30-Second Timed Answer Input** (`timer.cpp`), Session Telemetry CSV Logger (`quiz_history.cpp`) |
 | **Manaswin Perarattananon (Paan)** | 2674594 | PhD Student | **Scoring Algorithms**, Percentage Calculation, Letter Grade Assignment (A+ to F) & Summary Display (`scoring.cpp`) |
 
 ---
