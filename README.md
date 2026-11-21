@@ -1,10 +1,10 @@
 # Interactive C++ Quiz Game & Telemetry Regression Pipeline (C++ / Python)
 
+[![Coursework: Academic Project](https://img.shields.io/badge/Coursework-Academic%20Project-00599C?style=flat)](https://www.donga.ac.kr/)
+[![Institution: Dong-A University](https://img.shields.io/badge/Institution-Dong--A%20University-1f425f?style=flat)](https://www.donga.ac.kr/)
 [![Language: C++11](https://img.shields.io/badge/Language-C%2B%2B11-00599C?style=flat&logo=c%2B%2B&logoColor=white)](https://en.wikipedia.org/wiki/C%2B%2B11)
-[![Analysis: Python](https://img.shields.io/badge/Analysis-Python%203-3776AB?style=flat&logo=python&logoColor=white)](https://www.python.org/)
-[![Coursework: Dong-A University](https://img.shields.io/badge/Coursework-Dong--A%20University-blue?style=flat)](https://www.donga.ac.kr/)
-[![Team: Dream Team](https://img.shields.io/badge/Team-Dream%20Team-orange?style=flat)](#team-members--architectural-responsibilities)
-[![Status: Completed](https://img.shields.io/badge/Status-Completed-success?style=flat)](#)
+[![Analysis: Python 3](https://img.shields.io/badge/Analysis-Python%203-3776AB?style=flat&logo=python&logoColor=white)](https://www.python.org/)
+[![Status: Completed](https://img.shields.io/badge/Status-Completed-2e7d32?style=flat)](#)
 
 A modular, console-based multiple-choice quiz engine written in standard C++11 integrated with an empirical statistical regression and performance analysis pipeline in Python. Developed collaboratively by **Dream Team** as graduate coursework at **Dong-A University**, the application collects real-time user testing telemetry (response times, scores, percentages, and letter grades) to evaluate monotonic and linear correlations between quiz completion duration and academic performance outcomes.
 
@@ -12,7 +12,7 @@ A modular, console-based multiple-choice quiz engine written in standard C++11 i
 > **Academic Coursework Notice**  
 > This repository contains collaborative academic coursework developed for **Portfolio Project #2 (Machine Learning & Quality Management / Industrial Applied Statistics)** in the **Department of Smart Convergence Systems Engineering at Dong-A University**, South Korea.  
 > 
-> *Note for academic evaluators, reviewers, and recruiters:* This project demonstrates collaborative systems software engineering, modular decomposition, and empirical data analysis in a team academic environment. It is maintained strictly as an academic record and is distinct from primary individual research tracks in **RISC-V processor architecture, hardware description languages (Verilog), and instruction set design**.
+> *Note for academic evaluators, reviewers, and recruiters:* This project demonstrates collaborative systems software engineering, modular decomposition, and empirical data analysis in a team academic setting. It is maintained strictly as an academic record and is completely separate from my core individual research in **RISC-V ISA, computer architecture, instruction decoding, and CPU pipeline simulation in C**.
 
 ---
 
@@ -58,9 +58,9 @@ Developed by **Dream Team**, Department of Smart Convergence Systems Engineering
 | :--- | :---: | :--- | :--- |
 | **Dharanidharan Ravikumar** ([@DharanidharanRavikumar](https://github.com/DharanidharanRavikumar)) | 2671007 | Master's Student | **System Architecture & Integration**, Main Game Flow (`main.cpp`, `quiz_core.cpp`), Shared Header Interface Definition (`quiz.h`), Category-Specific Leaderboard Ranking System (`ranking.cpp`) |
 | **Maria Liezel Eusebio** ([@mceusebio](https://github.com/mceusebio)) | 2677319 | Master's Student | **Categories & Question Bank** (`categories.cpp`), Statistical Correlation & Regression Pipeline (`correlation_analysis.ipynb`) |
-| **Saranrat Roteaim (Fah)** | 2677934 | Master's - PhD Integrated | **Random Question Generator** without replacement (`random_questions.cpp`) |
-| **Patthadol Raksapram (Pawe)** ([@Dolptd](https://github.com/Dolptd)) | 2677946 | Master's - PhD Integrated | **30-Second Timed Answer Input** (`timer.cpp`), Session Telemetry CSV Logger (`quiz_history.cpp`) |
-| **Manaswin Perarattananon (Paan)** | 2674594 | PhD Student | **Scoring Algorithms**, Percentage Calculation, Letter Grade Assignment (A+ to F) & Summary Display (`scoring.cpp`) |
+| **Saranrat Roteaim** ([@SaranratR](https://github.com/SaranratR)) | 2677934 | Master's - PhD Integrated | **Random Question Generator** without replacement (`random_questions.cpp`) |
+| **Patthadol Raksapram** ([@Dolptd](https://github.com/Dolptd)) | 2677946 | Master's - PhD Integrated | **30-Second Timed Answer Input** (`timer.cpp`), Session Telemetry CSV Logger (`quiz_history.cpp`) |
+| **Manaswin Perarattananon** | 2674594 | PhD Student | **Scoring Algorithms**, Percentage Calculation, Letter Grade Assignment (A+ to F) & Summary Display (`scoring.cpp`) |
 
 ---
 
@@ -87,7 +87,7 @@ graph TD
 
 ### Architectural Coordination & The Shared Header Contract (`quiz.h`)
 
-To enable five developers to work concurrently without merge hazards or interface divergence, the system architecture enforces an explicit boundary contract defined in `quiz.h`:
+To enable five developers to work concurrently without merge conflicts or interface divergence, the system architecture enforces an explicit boundary contract defined in `quiz.h`:
 
 ```cpp
 // ---------- Shared settings ----------
@@ -95,7 +95,7 @@ const int QUESTIONS_PER_QUIZ   = 10;  // Number of questions per quiz session
 const int SECONDS_PER_QUESTION = 30;  // Per-question countdown time limit
 
 // ---------- Module Interface Contract ----------
-// categories.cpp (Liezel)
+// categories.cpp (Maria Liezel Eusebio)
 int getNumberOfCategories();
 string getCategoryName(int category);
 int getQuestionCount(int category);
@@ -103,20 +103,20 @@ string getQuestionText(int category, int questionNumber);
 string getChoice(int category, int questionNumber, int choiceNumber);
 char getCorrectAnswer(int category, int questionNumber);
 
-// random_questions.cpp (Fah)
+// random_questions.cpp (Saranrat Roteaim)
 void pickRandomQuestions(int totalQuestions, int howManyToPick);
 int getPickedQuestion(int position);
 
-// timer.cpp (Pawe)
+// timer.cpp (Patthadol Raksapram)
 char getTimedAnswer(int seconds);
 
-// scoring.cpp (Paan)
+// scoring.cpp (Manaswin Perarattananon)
 int calculatePercent(int correctAnswers, int totalQuestions);
 string calculateGrade(int percent);
 void showResultSummary(string username, int correctAnswers, int totalQuestions,
                        int percent, string grade);
 
-// quiz_core.cpp & ranking.cpp (Dharani)
+// quiz_core.cpp & ranking.cpp (Dharanidharan Ravikumar)
 int runQuiz(int category, int numberOfQuestions);
 void saveAndShowRanking(string username, int percent, int category);
 
@@ -167,14 +167,18 @@ timestamp,username,category,correct_answers,total_questions,percentage,grade,dur
 
 ### Statistical Methodology & Regression Models
 
-- **Independent Variable ($X$)**: Quiz Completion Duration (measured in seconds).
-- **Dependent Variable ($Y$)**: Final Percentage Score ($0 - 100\%$) and Letter Grade Rank ($F < D < C < B < A < A+$).
-- **Spearman's Rank Correlation ($\rho$)**:
-  $$\rho = 1 - \frac{6 \sum d_i^2}{n(n^2 - 1)}$$
+- **Independent Variable (X)**: Quiz Completion Duration (recorded in seconds).
+- **Dependent Variable (Y)**: Final Percentage Score (0% to 100%) and Letter Grade Rank (F < D < C < B < A < A+).
+- **Spearman's Rank Correlation (ρ)**:
+  ```text
+  ρ = 1 - (6 × Σ dᵢ²) / (n(n² - 1))
+  ```
   Assesses monotonic relationships between response time and academic performance without assuming normality.
-- **Hypothesis Testing**: Permutation testing against a significance threshold of $\alpha = 0.05$.
+- **Hypothesis Testing**: Permutation testing against a significance threshold of alpha = 0.05.
 - **Ordinary Least Squares (OLS) Linear Regression**:
-  $$\text{Score } (\%) = \beta_0 + \beta_1 \times \text{Duration } (\text{s})$$
+  ```text
+  Predicted Score (%) = β₀ + β₁ × Duration (seconds)
+  ```
   Evaluates trend direction and slope sensitivity for Category 1 vs Category 2.
 
 ---
@@ -268,7 +272,7 @@ g++ -Wall -std=c++11 tests/test_timer.cpp timer.cpp -o test_timer.exe
 
 1. Open [`correlation_analysis.ipynb`](correlation_analysis.ipynb) in Jupyter Notebook, VS Code, or Google Colab.
 2. Ingest `quiz_game/data/quiz_history.csv` when prompted.
-3. Run all cells to compute sample sizes, rank coefficients, $p$-values, descriptive regression lines, and generate categorized scatter plots.
+3. Run all cells to compute sample sizes, rank coefficients, p-values, descriptive regression lines, and generate categorized scatter plots.
 
 ---
 
@@ -277,7 +281,7 @@ g++ -Wall -std=c++11 tests/test_timer.cpp timer.cpp -o test_timer.exe
 This repository is maintained as a record of graduate academic coursework:
 1. **Coursework Context**: Developed for Portfolio Project #2 (ML & QM) under the Department of Smart Convergence Systems Engineering at Dong-A University.
 2. **Team Collaboration**: Highlights modular interface coordination, source integration, and shared architectural contracts.
-3. **Domain Independence**: Distinct from my specialized research domain in **computer architecture, pipelined CPU design, and RISC-V digital hardware simulation**.
+3. **Domain Independence**: Distinct from my specialized research domain in **computer architecture, CPU pipeline simulation in C, and RISC-V ISA instruction decoding**.
 
 ---
 
@@ -285,6 +289,6 @@ This repository is maintained as a record of graduate academic coursework:
 
 - **Dharanidharan Ravikumar** — Graduate Student, Dong-A University ([@DharanidharanRavikumar](https://github.com/DharanidharanRavikumar))
 - **Maria Liezel Eusebio** — Graduate Student, Dong-A University ([@mceusebio](https://github.com/mceusebio))
-- **Saranrat Roteaim (Fah)** — Integrated Graduate Student, Dong-A University
-- **Patthadol Raksapram (Pawe)** — Integrated Graduate Student, Dong-A University ([@Dolptd](https://github.com/Dolptd))
-- **Manaswin Perarattananon (Paan)** — PhD Student, Dong-A University
+- **Saranrat Roteaim** — Integrated Graduate Student, Dong-A University ([@SaranratR](https://github.com/SaranratR))
+- **Patthadol Raksapram** — Integrated Graduate Student, Dong-A University ([@Dolptd](https://github.com/Dolptd))
+- **Manaswin Perarattananon** — PhD Student, Dong-A University

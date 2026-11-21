@@ -7,11 +7,11 @@ to a CSV history file for later analysis.
 
 ## Team responsibilities
 
-- Dharani: integration, quiz flow, and ranking
-- Liezel: categories and question bank
-- Fah: random question selection
-- Pawe: timed answer input
-- Paan: scoring, grading, and result summary
+- Dharanidharan Ravikumar: integration, quiz flow, and ranking
+- Maria Liezel Eusebio: categories and question bank
+- Saranrat Roteaim: random question selection
+- Patthadol Raksapram: timed answer input
+- Manaswin Perarattananon: scoring, grading, and result summary
 
 ## Requirements
 
