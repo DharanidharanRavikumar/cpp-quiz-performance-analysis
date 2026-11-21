@@ -1,0 +1,12 @@
+Email-ready academic project package
+
+Excluded from the original ZIP to comply with Gmail attachment restrictions:
+- quiz_game/quiz.exe (Windows executable)
+- quiz_game/build.bat (Windows batch script)
+
+Everything else, including C++ source files, Jupyter notebook, PPTX, PDF,
+data files, and tests, is included. The quiz.exe executable can be rebuilt
+from C++ source using the instructions in quiz_game/README.md.
+
+If a recipient needs the unmodified original ZIP including the Windows
+build script and executable, share the original via Google Drive instead.

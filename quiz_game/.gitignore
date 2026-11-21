@@ -1,0 +1,5 @@
+quiz.exe
+quiz
+*.o
+test_*.exe
+data/leaderboard_category_*.txt

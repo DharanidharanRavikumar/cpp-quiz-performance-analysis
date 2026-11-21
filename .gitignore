@@ -1,0 +1,21 @@
+# Compiled binaries and object files
+*.exe
+*.o
+*.obj
+*.out
+quiz_game/quiz.exe
+quiz_game/quiz
+quiz_game/test_*.exe
+
+# Generated leaderboard runtime files (preserved data/quiz_history.csv is tracked)
+quiz_game/data/leaderboard_category_*.txt
+
+# Python / Jupyter artifacts
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# IDE and environment files
+.vscode/
+.DS_Store
+Thumbs.db
