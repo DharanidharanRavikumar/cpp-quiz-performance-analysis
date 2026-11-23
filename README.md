@@ -291,4 +291,4 @@ This repository is maintained as a record of graduate academic coursework:
 - **Maria Liezel Eusebio** — Graduate Student, Dong-A University ([@mceusebio](https://github.com/mceusebio))
 - **Saranrat Roteaim** — Integrated Graduate Student, Dong-A University ([@SaranratR](https://github.com/SaranratR))
 - **Patthadol Raksapram** — Integrated Graduate Student, Dong-A University ([@Dolptd](https://github.com/Dolptd))
-- **Manaswin Perarattananon** — PhD Student, Dong-A University ([@paan202426](https:github.com/paan202426))
+- **Manaswin Perarattananon** — PhD Student, Dong-A University ([@paan202426](https://github.com/paan202426))
