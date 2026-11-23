@@ -60,7 +60,7 @@ Developed by **Dream Team**, Department of Smart Convergence Systems Engineering
 | **Maria Liezel Eusebio** ([@mceusebio](https://github.com/mceusebio)) | 2677319 | Master's Student | **Categories & Question Bank** (`categories.cpp`), Statistical Correlation & Regression Pipeline (`correlation_analysis.ipynb`) |
 | **Saranrat Roteaim** ([@SaranratR](https://github.com/SaranratR)) | 2677934 | Master's - PhD Integrated | **Random Question Generator** without replacement (`random_questions.cpp`) |
 | **Patthadol Raksapram** ([@Dolptd](https://github.com/Dolptd)) | 2677946 | Master's - PhD Integrated | **30-Second Timed Answer Input** (`timer.cpp`), Session Telemetry CSV Logger (`quiz_history.cpp`) |
-| **Manaswin Perarattananon** | 2674594 | PhD Student | **Scoring Algorithms**, Percentage Calculation, Letter Grade Assignment (A+ to F) & Summary Display (`scoring.cpp`) |
+| **Manaswin Perarattananon** ([@paan202426](https://github.com/paan202426)) | 2674594 | PhD Student | **Scoring Algorithms**, Percentage Calculation, Letter Grade Assignment (A+ to F) & Summary Display (`scoring.cpp`) |
 
 ---
 
@@ -291,4 +291,4 @@ This repository is maintained as a record of graduate academic coursework:
 - **Maria Liezel Eusebio** — Graduate Student, Dong-A University ([@mceusebio](https://github.com/mceusebio))
 - **Saranrat Roteaim** — Integrated Graduate Student, Dong-A University ([@SaranratR](https://github.com/SaranratR))
 - **Patthadol Raksapram** — Integrated Graduate Student, Dong-A University ([@Dolptd](https://github.com/Dolptd))
-- **Manaswin Perarattananon** — PhD Student, Dong-A University
+- **Manaswin Perarattananon** — PhD Student, Dong-A University ([@paan202426](https:github.com/paan202426))
